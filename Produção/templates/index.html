@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Produção</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Produção</h1>
+
+        <form id="producaoForm" action="/registrar" method="POST">
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <input type="text" id="produto" name="produto" required>
+            </div>
+
+            <div class="form-group">
+                <label for="materiaPrima">Matéria-Prima Utilizada:</label>
+                <input type="text" id="materiaPrima" name="materiaPrima" required>
+            </div>
+
+            <div class="form-group">
+                <label for="qtdMateriaPrima">Quantidade de Matéria-Prima:</label>
+                <input type="number" id="qtdMateriaPrima" name="qtdMateriaPrima" required>
+                <select id="unidadeMateriaPrima" name="unidadeMateriaPrima" required>
+                    <option value="kg">KG</option>
+                    <option value="kg">CX</option>
+                    <option value="g">PT</option>
+                    <option value="unidades">UN</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="qtdProdutoFinal">Quantidade de Produto Final:</label>
+                <input type="number" id="qtdProdutoFinal" name="qtdProdutoFinal" required>
+                <select id="unidadeProdutoFinal" name="unidadeProdutoFinal" required>
+                    <option value="kg">KG</option>
+                    <option value="kg">CX</option>
+                    <option value="g">PT</option>
+                    <option value="unidades">UN</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="observacoes">Observações (opcional):</label>
+                <textarea id="observacoes" name="observacoes"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Registrar Produção</button>
+        </form>
+    </div>
+</body>
+</html>
